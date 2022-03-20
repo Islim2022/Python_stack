@@ -1,0 +1,61 @@
+
+D:\Desktop\Axsos
+λ ls
+Alogrithim/  Exam/  Webfun/
+
+D:\Desktop\Axsos
+λ mkdir Python_stack
+
+D:\Desktop\Axsos
+λ ls
+Alogrithim/  Exam/  Python_stack/  Webfun/
+
+D:\Desktop\Axsos
+λ cd Python_stack
+
+D:\Desktop\Axsos\Python_stack
+λ mkdir my_environments
+
+D:\Desktop\Axsos\Python_stack
+λ mkdir _python
+
+D:\Desktop\Axsos\Python_stack
+λ mkdir django
+
+D:\Desktop\Axsos\Python_stack
+λ ls
+_python/  django/  my_environments/
+
+D:\Desktop\Axsos\Python_stack
+λ cd _python
+
+D:\Desktop\Axsos\Python_stack\_python
+λ mkdir python_fundamentals
+
+D:\Desktop\Axsos\Python_stack\_python
+λ mkdir OOP
+
+D:\Desktop\Axsos\Python_stack\_python
+λ ls
+OOP/  python_fundamentals/
+
+D:\Desktop\Axsos\Python_stack\_python
+λ cd ..
+
+D:\Desktop\Axsos\Python_stack
+λ
+D:\Desktop\Axsos\Python_stack
+λ cd django
+
+D:\Desktop\Axsos\Python_stack\django
+λ mkdir django_fundamentals
+
+D:\Desktop\Axsos\Python_stack\django
+λ mkdir django_orm
+
+D:\Desktop\Axsos\Python_stack\django
+λ mkdir django_fullstack
+
+D:\Desktop\Axsos\Python_stack\django
+λ ls
+django_fullstack/  django_fundamentals/  django_orm/
