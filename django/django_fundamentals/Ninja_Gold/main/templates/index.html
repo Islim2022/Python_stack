@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <div class="container">
+        <div class="Gold-score">
+            <p id="your-gold">
+            Your Gold:
+            <input id="gold-count" value="{{ request.session.ninja_money }}">
+            </p>
+        </div>
+
+        <div class="places">
+            <div class="place">
+                <h2>Farm</h2>
+                <p>(Earns 10 - 20 golds)</p>
+                <form action="/process_money" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="form" value="farm" />
+                <input type="submit" value="Find Gold!" id="button">
+                </form>
+            </div>
+            <div class="place">
+                <h2>Cave</h2>
+                <p>(Earns 5 - 10 golds)</p>
+                <form action="/process_money" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="form" value="cave" />
+                <input type="submit" value="Find Gold!" id="button">
+                </form>
+            </div>
+            <div class="place">
+                <h2>House</h2>
+                <p>(Earns 2 - 5 golds)</p>
+                <form action="/process_money" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="form" value="house" />
+                <input type="submit" value="Find Gold!" id="button">
+                </form>
+            </div>
+            <div class="place-">
+                <h2>Casino</h2>
+                <p>(Earns/takes 0 - 50 golds)</p>
+                <form action="/process_money" method="POST">
+                {% csrf_token %}
+                <input type="hidden" name="form" value="casino" />
+                <input type="submit" value="Find Gold!" id="button">
+                </form>
+            </div>
+        </div>
+
+        <div class="activities">
+            <h3>Activities:</h3>
+            <div id="moves">
+                {% for log in request.session.ninja_log %}
+                {% if 'Lost' in log %}
+                <p style="color: red">{{ log }}</p>
+                {% else %}
+                <p style="color: green">{{ log }}</p>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
