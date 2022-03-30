@@ -3,8 +3,6 @@ from time import localtime, strftime
 import random
 
 def index(request):
-  # del request.session['user_log']
-  # del request.session['user_money']
   if 'ninja_money' in request.session:
     print('ninja_money =')
     request.session['ninja_money'] 
