@@ -1,0 +1,54 @@
+
+.container{
+    width: fit-content;
+    margin: 50px auto;
+    text-align: center;
+    border: 3px solid gray;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.form_1, .form_2{
+    display:inline-block;
+    text-align: start;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+}
+#button{
+    width: 80px;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+    box-shadow: 4px 4px 5px #888888;
+    background-color: goldenrod;
+    color: white;
+    font-size: 14px;
+}
+label{
+    margin-right: 20px;
+}
+.all_dojos_container{
+    width: fit-content;
+    margin: auto;
+    text-align: center;
+}
+.dojo_name {
+    list-style-type: none;
+    margin: 5px;
+    font-weight: bold;
+    text-align: justify;
+}
+.all_dojos_container li a{
+    text-decoration: none;
+    color: red;
+    font-weight: normal;
+}
+input, select{
+    width: 60%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
