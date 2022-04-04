@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Tv Show</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Tv Show {{ show.id }}</h1>
+        <p> Title: {{ show.title }}</p>
+        <p>Network: {{ show.network }}</p>
+        <p>Release Date: {{ show.release_date }}</p>
+        <p>Description: {{ show.description }}</p>
+        <p>Last updated: {{ show.updated_at }}</p>
+        <p><a href="/shows/{{ show.id }}/edit">Edit</a> | <a href="/shows/{{ show.id }}/destroy">Delete</a></p>
+        <input type="submit" value="Go Back" id="button" onclick="history.go(-1)">
+    </div>
+
+</body>
+</html>

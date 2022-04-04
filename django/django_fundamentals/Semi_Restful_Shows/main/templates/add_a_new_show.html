@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Add a new show</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Show</h1>
+        <form action="/shows/create" method="POST" id="form">
+            {% csrf_token %}
+            <label for="title">Title</label>
+            <input type="text" name="title">
+            <br>
+            <label for="network">Network</label>
+            <input type="text" name="nwork">
+            <br>
+            <label for="release_date">Release Date</label>
+            <input type="date" name="rdate">
+            <br>
+            <label for="description">Description</label>
+            <input type="text" name="desc" id="desc">
+            <br>
+            <input type="submit" value="Create" id="button">
+        </form>
+        <input type="submit" value="Go Back" id="button" onclick="history.go(-1)">
+    </div>
+    
+</body>
+</html>
