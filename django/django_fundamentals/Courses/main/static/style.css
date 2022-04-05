@@ -1,0 +1,50 @@
+.container{
+    width: fit-content;
+    margin: 50px auto;
+    text-align: center;
+    border: 3px solid gray;
+    padding: 40px;
+    border-radius: 5px;
+    background-color:lightcyan;
+}
+#button{
+    width: 200px;
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 5px;
+    box-shadow: 4px 4px 5px #888888;
+    background-color: goldenrod;
+    color: white;
+    font-size: 16px;
+}
+input{
+    padding: 3px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 400px;
+}
+.add_course{
+    width: fit-content;
+    display: flex;
+}
+#show {
+    background-color: white;
+}
+#text {
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+}
+#text1 {
+    margin-top: 30px;
+    width: 10px;
+    height: 5px;
+}
+#form {
+    margin-top: 15px;
+}
+
+

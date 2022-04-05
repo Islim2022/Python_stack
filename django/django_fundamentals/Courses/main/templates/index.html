@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2>Add a new course</h2> 
+        <div class="add_course">
+            <div id="text">
+                <h3>Name:</h3><br>
+                <h3>Description:</h3>
+            </div>
+            <div id="form">
+                <form action="/add" method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="c_name">
+                    <br>
+                    <input type="text" name="desc" row="4">
+                    <br>
+                    <input type="submit" value="Add" id="button">
+                </form>
+            </div>
+        </div>
+
+        <div class="courses">
+            <h2>Courses</h2>
+            <div id="show">
+                <table class="table table-striped table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Description</th>
+                            <th>Date Added</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for course in courses %}
+                        <tr>
+                            <td>{{course.Course_name}}</td>
+                            <td>{{course.desc}}</td>
+                            <td>{{course.created_at}}</td>
+                            <td><a href="/remove/{{ course.id }}">Remove</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
