@@ -1,0 +1,37 @@
+.container, .container_2{
+    width: fit-content;
+    margin: 50px auto;
+    border: 3px solid gray;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+.container_2{
+    text-align: center;
+}
+button{
+    width: 150px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 5px #888888;
+    font-size: 16px;
+}
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.forms{
+    display: flex;
+    width: 700px;
+    justify-content: space-around;
+}
+input{
+    padding: 3px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    width: 250px;
+}
+.message{
+    font-size: 20px;
+    color: red;
+}
