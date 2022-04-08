@@ -1,0 +1,33 @@
+.container{
+    width: 1000px;
+    margin: 50px auto;
+    border: 3px solid gray;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: lightcyan;
+}
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 3px dotted gray;
+}
+.info p{
+    display: inline-block;
+    margin-left: 20px;
+}
+.post_message, .post_comment{
+    margin: 60px 6%;
+}
+.messages p{
+    text-align: justify;
+    margin: 0 40px;
+    padding: 20px;
+}
+.comments{
+    margin: 30px 60px;
+    text-align: justify;
+    padding: 20px;
+
+}
