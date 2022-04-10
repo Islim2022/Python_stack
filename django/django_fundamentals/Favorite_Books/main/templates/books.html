@@ -56,8 +56,8 @@
                     <li>
                         <p><a href="/books/{{book.id}}">{{book.title}}</a></p>
                         <p>(added by {{book.uploaded_by.first_name}} {{book.uploaded_by.last_name}})</p>
-                        {% if user in book.user_who_like.all %}
-                        <p>This is one of your favorites</p>
+                        {% if user in book.users_who_like.all %}
+                        <p><em>This is one of your favorites</em></p>
                         {% else %}
                         <a href="/add_to_favorites/{{book.id}}">Add to Favorites</a>
                         {% endif %}
